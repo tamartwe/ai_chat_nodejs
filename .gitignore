@@ -42,3 +42,4 @@ handbook/
 chromadb/
 
 .env
+.env.back
