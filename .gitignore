@@ -39,3 +39,4 @@ yarn.lock
 .bin/
 
 handbook/
+chromadb/
