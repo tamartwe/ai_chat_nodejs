@@ -1,10 +1,8 @@
 import { DirectoryLoader } from "langchain/document_loaders/fs/directory";
-
-import { CSVLoader } from "@langchain/community/document_loaders/fs/csv";
 import { PDFLoader } from "@langchain/community/document_loaders/fs/pdf";
+import { CSVLoader } from "@langchain/community/document_loaders/fs/csv";
 import { TextLoader } from "langchain/document_loaders/fs/text";
-
-const KNOWLEDGE_BASE_PATH = "./handbook/content"; 
+import { KNOWLEDGE_BASE_PATH } from "./consts";
 
 
 const loadDocuments = async () => {
@@ -15,7 +13,7 @@ const loadDocuments = async () => {
         ".csv": (path) => new CSVLoader(path),
     });
     const loadedDocs = await directoryLoader.load();
-    console.log(`I have loaded ${loadedDocs.length} documents!`);
+    console.log(`${loadedDocs.length} Documents Loaded`);
     return loadedDocs;
 }
 

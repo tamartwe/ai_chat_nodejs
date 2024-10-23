@@ -1,8 +1,7 @@
 import fs from 'fs';
 import simpleGit from 'simple-git';
+import { KNOWLEDGE_BASE_DIR, KNOWLEDGE_BASE_REPO_URL } from './consts';
 
-const KNOWLEDGE_BASE_DIR = "./handbook";
-const KNOWLEDGE_BASE_REPO_URL = "https://gitlab.com/gitlab-com/content-sites/handbook.git";
 const git = simpleGit();
 
 const getOrCreateDataSource = async () => {
