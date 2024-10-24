@@ -22,7 +22,7 @@ app.use(bodyParser.json());
 
 // POST request handler
 app.post('/api/question', async (req, res) => {
-  const userQuestion = req.body.question;
+  const userQuestion = req.body.userQuestion;
   if (!userQuestion) {
     return res.status(400).json({ error: 'User question required' });
   }
@@ -31,7 +31,7 @@ app.post('/api/question', async (req, res) => {
       question: userQuestion.trim(),
       context: retrievedChunks,
   });
-   res.status(200).json({ receivedMessage: response });
+   res.status(200).json({ answer: response });
 });
 
 // Starting the server
