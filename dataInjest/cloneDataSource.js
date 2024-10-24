@@ -1,6 +1,6 @@
 import fs from 'fs';
 import simpleGit from 'simple-git';
-import { KNOWLEDGE_BASE_DIR, KNOWLEDGE_BASE_REPO_URL } from './consts';
+import { KNOWLEDGE_BASE_DIR, KNOWLEDGE_BASE_REPO_URL } from './consts.js';
 
 const git = simpleGit();
 

@@ -2,7 +2,7 @@ import { DirectoryLoader } from "langchain/document_loaders/fs/directory";
 import { PDFLoader } from "@langchain/community/document_loaders/fs/pdf";
 import { CSVLoader } from "@langchain/community/document_loaders/fs/csv";
 import { TextLoader } from "langchain/document_loaders/fs/text";
-import { KNOWLEDGE_BASE_PATH } from "./consts";
+import { KNOWLEDGE_BASE_PATH } from "./consts.js";
 
 
 const loadDocuments = async () => {

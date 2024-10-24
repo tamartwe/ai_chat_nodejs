@@ -1,6 +1,6 @@
 import { OpenAIEmbeddings } from "@langchain/openai";
 import  { Chroma } from "@langchain/community/vectorstores/chroma";
-import {KNOWLEDGE_BASE_DB_COLLECTION_NAME} from './consts';
+import {KNOWLEDGE_BASE_DB_COLLECTION_NAME} from './consts.js';
 
 
 const storeAsVectors = async (splitDocs) => {
@@ -13,6 +13,7 @@ const storeAsVectors = async (splitDocs) => {
         const sectionLength = Math.ceil(splitDocs.length / 5); 
         for (let i = 0; i < 5; i++) { 
             const docsToInsert = splitDocs.slice((i * sectionLength), ((i + 1) * sectionLength));
+            console.log(`After document slice`);
             await Chroma.fromDocuments(docsToInsert, embeddingsModel, {
                 collectionName: KNOWLEDGE_BASE_DB_COLLECTION_NAME, 
             });
