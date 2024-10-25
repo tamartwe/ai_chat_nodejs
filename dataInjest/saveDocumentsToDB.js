@@ -10,8 +10,8 @@ const storeAsVectors = async (splitDocs) => {
         { 
             model: "text-embedding-3-small" 
         });
-        const sectionLength = Math.ceil(splitDocs.length / 5); 
-        for (let i = 0; i < 5; i++) { 
+        const sectionLength = Math.ceil(splitDocs.length / 4); 
+        for (let i = 0; i < 4; i++) { 
             const docsToInsert = splitDocs.slice((i * sectionLength), ((i + 1) * sectionLength));
             console.log(`After document slice`);
             await Chroma.fromDocuments(docsToInsert, embeddingsModel, {
