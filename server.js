@@ -4,6 +4,7 @@ import { createStuffDocumentsChain } from "langchain/chains/combine_documents";
 import createPrompt from "./llmBot/prompUtility.js";
 import generateContextRetreiver from "./llmBot/contextRetreiver.js";
 import express from 'express';
+import cors from 'cors';
 import bodyParser from 'body-parser';
 
 
@@ -17,6 +18,7 @@ const retriever = await generateContextRetreiver();
 const app = express();
 const port = 8080;
 
+app.use(cors());
 // Middleware to parse JSON bodies
 app.use(bodyParser.json());
 
