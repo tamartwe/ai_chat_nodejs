@@ -17,7 +17,7 @@ const retriever = await generateContextRetreiver();
 
 try {
     const USER_QUESTION = `
-        what is the difference between a DRI and a manager ?
+        How Amazon overcome the fact that many physical stores were closed during the pandemic ?
     
     `;
     const retrievedChunks = await retriever.invoke(USER_QUESTION);
