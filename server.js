@@ -19,7 +19,6 @@ const app = express();
 const port = 8080;
 
 app.use(cors());
-// Middleware to parse JSON bodies
 app.use(bodyParser.json());
 
 // POST request handler

@@ -8,7 +8,6 @@ import { KNOWLEDGE_BASE_PATH } from "./consts.js";
 const loadDocuments = async () => {
     const directoryLoader = new DirectoryLoader(KNOWLEDGE_BASE_PATH, {
         ".pdf": (path) => new PDFLoader(path),
-        ".md": (path) => new TextLoader(path), 
         ".txt": (path) => new TextLoader(path), 
         ".csv": (path) => new CSVLoader(path),
     });
