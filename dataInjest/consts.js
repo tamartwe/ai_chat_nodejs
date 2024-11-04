@@ -1,9 +1,7 @@
 const KNOWLEDGE_BASE_PATH = "./dataInjest/amazon"; 
-const KNOWLEDGE_BASE_DB_COLLECTION_NAME = "amazon-knowledge-base-3";
+const KNOWLEDGE_BASE_DB_COLLECTION_NAME = "amazon-knowledge-base-4";
 
 export {
-    KNOWLEDGE_BASE_DIR,
-    KNOWLEDGE_BASE_REPO_URL,
     KNOWLEDGE_BASE_PATH,
     KNOWLEDGE_BASE_DB_COLLECTION_NAME
   };
