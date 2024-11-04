@@ -1,14 +1,11 @@
 import dotenv from "dotenv";
 import { ChatOpenAI } from "@langchain/openai";
 import { createStuffDocumentsChain } from "langchain/chains/combine_documents"; 
-import countDocuments from "./dataAccessLayer/countDocsInDb.js";
 import createPrompt from "./llmBot/prompUtility.js";
 import generateContextRetreiver from "./llmBot/contextRetreiver.js";
 
 
 dotenv.config(); 
-
-const documentsCount = await countDocuments();
 
 const llm = new ChatOpenAI({ model: "gpt-4o" });
 const prompt = await createPrompt();
